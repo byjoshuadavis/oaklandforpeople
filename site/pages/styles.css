@@ -1,8 +1,8 @@
 html, body {
-    font-family: 'Oswald', sans-serif;
     font-size: 18px;
     background: #E8E8CC;
     color: #0B4619;
+    font-family: 'Merriweather', serif;
 }
 
 hgroup {
@@ -38,10 +38,11 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Merriweather', serif;
+    font-family: 'Oswald', sans-serif;
 }
 main {
     margin-top: 8em;
+    text-align: center;
 }
 #main {
     max-width: 25em;
@@ -56,6 +57,7 @@ input {
     margin: 0 2em;
     border-radius: 3px;
     font-size: .8em;
+    font-family: 'Merriweather', serif;
 }
 
 input:focus {
@@ -104,4 +106,10 @@ input[type=submit] {
     cursor: pointer;
     margin-top: 2em;
     font-weight: bold;
+    font-family: 'Oswald', serif;
+}
+
+input[type=submit]:hover,
+input[type=submit]:focus {
+    border: 3px solid rgba(0, 0, 0, .4);
 }
