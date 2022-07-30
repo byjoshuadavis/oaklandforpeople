@@ -22,10 +22,14 @@ export default function HomePage() {
       </hgroup>
       <main>
         <p>
-          Safer streets for people. Vision zero means vision zero. End traffic
-          violence.
+          We are a group of East Bay residents who want safer streets for
+          people. We believe vision zero should mean vision zero. We want to end
+          traffic violence on our streets.
         </p>
-        <p>If you're looking to learn more, please get in touch with us.</p>
+        <p>
+          If you're looking to learn more or join us please get in touch with
+          us.
+        </p>
         <form onSubmit={handleSubmit}>
           <label>
             Your email
