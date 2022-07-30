@@ -3,7 +3,7 @@ import axios from "axios";
 export default function contact(req) {
   console.log(req);
   const { email, zip } = req.query;
-  axios
+  return axios
     .post(
       "https://api.airtable.com/v0/appLCQ7R1qR4sb1m4/OaklandForPeople",
       {

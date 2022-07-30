@@ -3,10 +3,11 @@ import axios from "axios";
 export default function HomePage() {
   const [email, setEmailState] = React.useState("");
   const [zip, setZipState] = React.useState("");
-
+  const [showThankYou, setShowThankYou] = React.useState(false);
   function handleSubmit(e) {
     e.preventDefault();
-    axios.get(`/api/contact?zip=${zip}&email=${email}`);
+    setShowThankYou(true);
+    axios.get(`/api/contact?zip=${zip}&email=${email}`).finally(() => {});
   }
   function setEmail(e) {
     setEmailState(e.currentTarget.value);
@@ -44,7 +45,11 @@ export default function HomePage() {
             Your zipcode
             <input type="zipcode" placeholder="94607" onChange={setZip} />
           </label>
-          <input type="submit" value="Connect with us" />
+          {showThankYou ? (
+            <span>Thanks!</span>
+          ) : (
+            <input type="submit" value="Connect with us" />
+          )}
         </form>
       </main>
     </div>
